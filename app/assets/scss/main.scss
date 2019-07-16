@@ -1,0 +1,23 @@
+@import "message/message";
+@import "message/messages";
+@import "room/rooms";
+@import "emoji";
+@import "search";
+
+textarea, select, input, button { outline: none; }
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #212121;
+  font-family: 'Roboto', sans-serif;
+
+  #layout {
+    display: flex;
+  }
+}

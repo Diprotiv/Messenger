@@ -1,0 +1,22 @@
+sudo: false
+language: node_js
+cache:
+  directories:
+    - node_modules
+branches:
+  only:
+      - master
+      - /^greenkeeper/.*$/
+notifications:
+  email: false
+node_js:
+  - "node"
+  - "lts/*"
+before_install:
+  - npm i -g npm
+  - sudo cp -f .dist/params/test.json app/config/params/test.json
+before_script:
+  - npm prune
+script:
+  - npm run test
+install: npm install
